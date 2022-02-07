@@ -39,6 +39,14 @@ GraalVM is a drop in replacement for OpenJDK with some extra powers.
     From the main window, select `File->Install Extensions...`, click the `+`,
     and select the Ghidraal release zip file from the repo `dist` directory.
 
+!!! Install Python into GraalVM!
+
+```
+gu install python
+```
+
+[see](https://www.graalvm.org/python/quickstart/)
+
 4. Restart Ghidra
 
 5. Open a program.  If not prompted to, select `File->Configure...`, under

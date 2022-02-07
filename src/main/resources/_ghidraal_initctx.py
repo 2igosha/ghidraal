@@ -41,7 +41,7 @@ def ghidraal_import(name, globals=None, locals=None, fromlist=(), level=0):
 if '_ghidraal_use_jythonic_imports' not in globals():
     import builtins
     # fetch packages visible to GhidraScript's ClassLoader
-    gs_classloader = java.type('ghidra.app.script.GhidraScript')['class'].getClassLoader()
+    gs_classloader = getattr(java.type('ghidra.app.script.GhidraScript'),'class').getClassLoader()
     _ghidraal_package_names = [p.getName() for p in gs_classloader.getDefinedPackages()]
     _ghidraal_original_import = builtins.__import__
     _ghidraal_use_jythonic_imports = True
